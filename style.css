@@ -4,7 +4,7 @@
     border-radius: 15px;
     position: relative;
 }
-.firstPlayer{
+.player-0{
     position: absolute;
     width: 50%;
     height: 100%;
@@ -16,7 +16,7 @@
     align-items: center;
 
 }
-.secondPlayer{
+.player-1{
     position: absolute;
     height: 100%;
     width: 50%;
