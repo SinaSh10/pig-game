@@ -2,6 +2,7 @@ let playerName0=prompt('first player name')
 let playerName1=prompt('second player name')
 document.querySelector('#playerName0').innerHTML=playerName0
 document.querySelector('#playerName1').innerHTML=playerName1
+let playerName=[playerName0,playerName1]
 
 let current0=document.querySelector('#current0')
 let total0=document.querySelector('#total0')
@@ -17,15 +18,16 @@ function change(){
     activePlayer===0? activePlayer=1:activePlayer=0
 }
 function victory(){
-    if(total[activePlayer]>=100){
-        alert(`${activePlayer} win the game`)
+    if(total[activePlayer]>=10){
+        alert(`${playerName[activePlayer]} win the game`)
         total=[0,0]
-    score=[0,0]
-    total0.innerHTML=0
-    total1.innerHTML=0
-    score0.innerHTML=0
-    score1.innerHTML=0
-    images[ranNumber-1].classList.add('hidden')
+        score=[0,0]
+        total0.innerHTML=0
+        total1.innerHTML=0
+        current0.innerHTML=0
+        current1.innerHTML=0
+        images[ranNumber-1].classList.add('hidden')
+        change()
     }
     
 }
@@ -67,4 +69,16 @@ document.querySelector('#save').addEventListener('click',()=>{
    
    
 })   
+
+document.querySelector('#start').addEventListener('click',()=>{
+    total=[0,0]
+    score=[0,0]
+    total0.innerHTML=0
+    total1.innerHTML=0
+    current0.innerHTML=0
+    current1.innerHTML=0
+    images[ranNumber-1].classList.add('hidden')
+    change()
+    }
+)
 
